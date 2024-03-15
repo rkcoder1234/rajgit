@@ -32,5 +32,8 @@ jobs:
 
     - name: myfullname
       run: echo ${{ env.full_name }}
+      
+    - name: email
+      run: echo ${{ env.email }}
 
 
