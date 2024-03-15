@@ -1,0 +1,21 @@
+name: Add Index File
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name if different
+
+jobs:
+  add-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Add Index File
+        run: |
+          echo "<html><body><h1>Hello, World!</h1></body></html>" > index.html
+          git add index.html
+          git commit -m "Add index.html via GitHub Actions" || true
+          git push origin main
