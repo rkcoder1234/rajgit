@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.12  # Choose Python version
+        python-version: "3.12"  # Choose Python version
 
     - name: Multiline Script
       run: |
@@ -24,7 +24,7 @@ jobs:
            echo Here is my Github Assignment.
            
     - name: Python Script
-      run: raj.py
+      run:  python raj.py
 
     - name: myfullname
       run: echo ${{ env.full_name }}
