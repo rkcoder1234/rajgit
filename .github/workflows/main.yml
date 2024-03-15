@@ -1,0 +1,32 @@
+name: Python Workflow
+
+on:
+  push:
+jobs:
+  python_build:  
+
+    runs-on: ubuntu-latest
+    env:
+        full_name: "Raj_Assignment"
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.12  # Choose Python version
+
+    - name: Multiline Script
+      run: |
+           echo This is Raj
+           echo Here is my Github Assignment.
+           
+    - name: Python Script
+      run: raj.py
+
+    - name: myfullname
+      run: echo ${{ env.full_name }}
+
+
