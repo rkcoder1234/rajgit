@@ -6,8 +6,12 @@ jobs:
   python_build:  
 
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
     env:
         full_name: "Raj_Assignment"
+        email: "rajkansal2000@gmail.com"
 
     steps:
     - name: Checkout repository
